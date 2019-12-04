@@ -1,0 +1,660 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2019.3">
+  <Nodes>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="244" y="613" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Floor([DownloadData]/3)-2" field="DownloadData" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[DownloadData = Floor([DownloadData]/3)-2
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="69" y="345" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="DownloadData" selected="True" type="Int32" size="4" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="244" y="709" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="DownloadData" action="Sum" rename="Sum_DownloadData" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="69" y="441" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>RecordID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+        <Position x="244" y="517" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="True" />
+          <UpdateField_Name>DownloadData</UpdateField_Name>
+          <CreateField_Name>RowCount</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <Expression_Init>[DownloadData]</Expression_Init>
+          <Expression_Cond>Floor([DownloadData]/3)-2&gt;0</Expression_Cond>
+          <Expression_Loop>Floor([DownloadData]/3)-2</Expression_Loop>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="67.5" y="537.5" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Floor([DownloadData]/3)-2" field="DownloadData" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[DownloadData = Floor([DownloadData]/3)-2
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="62.5" y="637.5" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="DownloadData" action="Sum" rename="Sum_DownloadData" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="172.5" y="257.5" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="100" />
+          <Fields>
+            <Field name="DownloadData" />
+          </Fields>
+          <Data>
+            <r>
+              <c>129880</c>
+            </r>
+            <r>
+              <c>115705</c>
+            </r>
+            <r>
+              <c>118585</c>
+            </r>
+            <r>
+              <c>124631</c>
+            </r>
+            <r>
+              <c>81050</c>
+            </r>
+            <r>
+              <c>138183</c>
+            </r>
+            <r>
+              <c>61173</c>
+            </r>
+            <r>
+              <c>95354</c>
+            </r>
+            <r>
+              <c>130788</c>
+            </r>
+            <r>
+              <c>89082</c>
+            </r>
+            <r>
+              <c>75554</c>
+            </r>
+            <r>
+              <c>110104</c>
+            </r>
+            <r>
+              <c>140528</c>
+            </r>
+            <r>
+              <c>71783</c>
+            </r>
+            <r>
+              <c>125889</c>
+            </r>
+            <r>
+              <c>126602</c>
+            </r>
+            <r>
+              <c>73089</c>
+            </r>
+            <r>
+              <c>76822</c>
+            </r>
+            <r>
+              <c>51774</c>
+            </r>
+            <r>
+              <c>85940</c>
+            </r>
+            <r>
+              <c>81004</c>
+            </r>
+            <r>
+              <c>149584</c>
+            </r>
+            <r>
+              <c>145921</c>
+            </r>
+            <r>
+              <c>105570</c>
+            </r>
+            <r>
+              <c>142370</c>
+            </r>
+            <r>
+              <c>80823</c>
+            </r>
+            <r>
+              <c>147779</c>
+            </r>
+            <r>
+              <c>115651</c>
+            </r>
+            <r>
+              <c>70250</c>
+            </r>
+            <r>
+              <c>67763</c>
+            </r>
+            <r>
+              <c>128192</c>
+            </r>
+            <r>
+              <c>51298</c>
+            </r>
+            <r>
+              <c>134963</c>
+            </r>
+            <r>
+              <c>73510</c>
+            </r>
+            <r>
+              <c>90976</c>
+            </r>
+            <r>
+              <c>141216</c>
+            </r>
+            <r>
+              <c>65134</c>
+            </r>
+            <r>
+              <c>140468</c>
+            </r>
+            <r>
+              <c>143998</c>
+            </r>
+            <r>
+              <c>101711</c>
+            </r>
+            <r>
+              <c>88477</c>
+            </r>
+            <r>
+              <c>53335</c>
+            </r>
+            <r>
+              <c>138328</c>
+            </r>
+            <r>
+              <c>141186</c>
+            </r>
+            <r>
+              <c>149804</c>
+            </r>
+            <r>
+              <c>64950</c>
+            </r>
+            <r>
+              <c>53107</c>
+            </r>
+            <r>
+              <c>54648</c>
+            </r>
+            <r>
+              <c>97557</c>
+            </r>
+            <r>
+              <c>85927</c>
+            </r>
+            <r>
+              <c>125038</c>
+            </r>
+            <r>
+              <c>80514</c>
+            </r>
+            <r>
+              <c>64912</c>
+            </r>
+            <r>
+              <c>140591</c>
+            </r>
+            <r>
+              <c>114229</c>
+            </r>
+            <r>
+              <c>57089</c>
+            </r>
+            <r>
+              <c>123464</c>
+            </r>
+            <r>
+              <c>127572</c>
+            </r>
+            <r>
+              <c>137169</c>
+            </r>
+            <r>
+              <c>146550</c>
+            </r>
+            <r>
+              <c>51138</c>
+            </r>
+            <r>
+              <c>115504</c>
+            </r>
+            <r>
+              <c>128034</c>
+            </r>
+            <r>
+              <c>147244</c>
+            </r>
+            <r>
+              <c>108107</c>
+            </r>
+            <r>
+              <c>101205</c>
+            </r>
+            <r>
+              <c>51498</c>
+            </r>
+            <r>
+              <c>136829</c>
+            </r>
+            <r>
+              <c>140171</c>
+            </r>
+            <r>
+              <c>59441</c>
+            </r>
+            <r>
+              <c>144489</c>
+            </r>
+            <r>
+              <c>139384</c>
+            </r>
+            <r>
+              <c>145841</c>
+            </r>
+            <r>
+              <c>96771</c>
+            </r>
+            <r>
+              <c>116821</c>
+            </r>
+            <r>
+              <c>88599</c>
+            </r>
+            <r>
+              <c>126780</c>
+            </r>
+            <r>
+              <c>65012</c>
+            </r>
+            <r>
+              <c>67621</c>
+            </r>
+            <r>
+              <c>129699</c>
+            </r>
+            <r>
+              <c>149639</c>
+            </r>
+            <r>
+              <c>97590</c>
+            </r>
+            <r>
+              <c>147527</c>
+            </r>
+            <r>
+              <c>117462</c>
+            </r>
+            <r>
+              <c>146709</c>
+            </r>
+            <r>
+              <c>60527</c>
+            </r>
+            <r>
+              <c>107643</c>
+            </r>
+            <r>
+              <c>92956</c>
+            </r>
+            <r>
+              <c>72177</c>
+            </r>
+            <r>
+              <c>92285</c>
+            </r>
+            <r>
+              <c>62475</c>
+            </r>
+            <r>
+              <c>63099</c>
+            </r>
+            <r>
+              <c>66904</c>
+            </r>
+            <r>
+              <c>77268</c>
+            </r>
+            <r>
+              <c>62945</c>
+            </r>
+            <r>
+              <c>134364</c>
+            </r>
+            <r>
+              <c>106924</c>
+            </r>
+            <r>
+              <c>117842</c>
+            </r>
+            <r>
+              <c>130016</c>
+            </r>
+            <r>
+              <c>123712</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="32" y="8" width="152.0632" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 15</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="28" Margin="10" />
+          <Disabled value="True" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="1">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="56.99999" y="57" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="cookie" />
+                <Field name="URL" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>session=%User.cookie%</c>
+                  <c>https://adventofcode.com/2019/day/%User.day%/input</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+        <Node ToolID="2">
+          <GuiSettings Plugin="AlteryxConnectorGui.Download.Download">
+            <Position x="56.99998" y="153" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <URLField>URL</URLField>
+              <OutputMode>String</OutputMode>
+              <CodePage>65001</CodePage>
+              <EncodeURLs value="True" />
+              <Headers>
+                <NameValues />
+                <Fields orderChanged="False">
+                  <Field name="cookie" />
+                  <Field name="URL" selected="False" />
+                  <Field name="*Unknown" selected="False" />
+                </Fields>
+              </Headers>
+              <Payload>
+                <HTTPAction>GET</HTTPAction>
+                <QueryStringBodyMode>Compose</QueryStringBodyMode>
+                <ComposeNameValues />
+                <ComposeFields orderChanged="False">
+                  <Field name="cookie" selected="False" />
+                  <Field name="URL" selected="False" />
+                  <Field name="*Unknown" selected="False" />
+                </ComposeFields>
+              </Payload>
+              <UserName />
+              <Password />
+              <numConnections>2</numConnections>
+              <Timeout>600</Timeout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxConnectorEngine.dll" EngineDllEntryPoint="AlteryxDownload" />
+        </Node>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+            <Position x="68.99992" y="249" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Field>DownloadData</Field>
+              <Delimeters value="\n" />
+              <NumFields value="1" />
+              <Flags value="0" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Vertical</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>User</Namespace>
+        <Name>cookie</Name>
+        <Value>YOUR SESSION COOKIE</Value>
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>User</Namespace>
+        <Name>day</Name>
+        <Value>1</Value>
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day1_Public</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
